@@ -13,6 +13,12 @@
 |
 */
 
+// use App\Http\Controllers\TestController;
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+$router->get('coba', function () {
+    return "test" ;});
+
+$router->get('test', 'TestController@index');
